@@ -5,6 +5,23 @@ import webbrowser
 import requests
 from requests.exceptions import HTTPError
 
+car1 = ""
+
+#opening file to locate car identifier number
+file1 = open("", "r")
+
+#reading file contents
+readfile = file1.read()
+
+#checking if car is found within file
+if car1 in readfile:
+  print(car1, " found!")
+else:
+  print(car1, " not found!")
+  
+#closing file
+file1.close()
+
 #figure out link 
 link = ("")
 chrome_loc = "C:/Program Files (x86)/Google/Chrome/Application/chrome.exe %s"
