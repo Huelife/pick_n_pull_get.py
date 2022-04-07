@@ -24,6 +24,7 @@ while True:
     else:
       print("{} is an invalid option.".format(carInput))
       print("")
+    continue
 
 #opening file to locate car identifier number
 file1 = open("", "r")
