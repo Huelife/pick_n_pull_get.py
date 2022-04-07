@@ -1,4 +1,4 @@
-#pick_n_pull_get.py: Check for Toyota Camrys at PicknPull nearby and open link
+#check_Toyota_Camry.py: Check for Toyota Camrys at PicknPull nearby and open link
 
 import webbrowser
 
