@@ -16,12 +16,8 @@ while True:
     continue
   else:
     print("")
-    
-    #opening file to locate car identifier number
-    file1 = open("", "r")
-    
-    #reading file contents
-    readfile = file1.read()
+    file1 = open("", "r") #opening file to locate car identifier number
+    readfile = file1.read() #reading file contents
     
     if carInput == "q":
       break
