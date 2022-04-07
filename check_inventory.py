@@ -7,6 +7,24 @@ from requests.exceptions import HTTPError
 
 car1 = ""
 
+#while loop user input to check for car
+while True:
+  try:
+    carInput = input("What car are you looking for?"
+                     "\nEnter 'q' to quit. ").lower()
+  except ValueError:
+    continue
+  else:
+    print("")
+    if carInput == "q":
+      break
+    elif any(carInput in car1):
+      print("Found!")
+      print("")
+    else:
+      print("{} is an invalid option.".format(carInput))
+      print("")
+
 #opening file to locate car identifier number
 file1 = open("", "r")
 
