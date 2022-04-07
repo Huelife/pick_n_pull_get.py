@@ -16,31 +16,24 @@ while True:
     continue
   else:
     print("")
+    
+    #opening file to locate car identifier number
+    file1 = open("", "r")
+    
+    #reading file contents
+    readfile = file1.read()
+    
     if carInput == "q":
       break
-    elif any(carInput in car1):
-      print("Found!")
+    elif carInput in readfile: #checking if car is found within file
+      print(carInput, " found!")
       print("")
     else:
-      print("{} is an invalid option.".format(carInput))
+      print("{} not found!".format(carInput))
       print("")
+    file1.close() #closing file
     continue
-
-#opening file to locate car identifier number
-file1 = open("", "r")
-
-#reading file contents
-readfile = file1.read()
-
-#checking if car is found within file
-if car1 in readfile:
-  print(car1, " found!")
-else:
-  print(car1, " not found!")
   
-#closing file
-file1.close()
-
 #figure out link 
 link = ("")
 chrome_loc = "C:/Program Files (x86)/Google/Chrome/Application/chrome.exe %s"
