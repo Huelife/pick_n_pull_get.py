@@ -7,9 +7,6 @@ from requests.exceptions import HTTPError
 from bs4 import BeautifulSoup
 
 car1 = ""
-html = ""
-
-soup = BeautifulSoup(html, 'html.parser')
 
 #while loop user input to check for car
 while True:
@@ -22,6 +19,7 @@ while True:
     print("")
     file1 = open("", "r") #opening file to locate car identifier number
     readfile = file1.read() #reading file contents
+    soup = BeautifulSoup(readfile, 'html.parser')
     
     if carInput == "q":
       break
