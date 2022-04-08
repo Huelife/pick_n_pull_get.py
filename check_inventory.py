@@ -4,8 +4,12 @@ import webbrowser
 
 import requests
 from requests.exceptions import HTTPError
+from bs4 import BeautifulSoup
 
 car1 = ""
+html = ""
+
+soup = BeautifulSoup(html, 'html.parser')
 
 #while loop user input to check for car
 while True:
@@ -23,17 +27,20 @@ while True:
       break
     elif carInput in readfile: #checking if car is found within file
       print(carInput, " found!")
+      for option in soup.find_all('option'):  #finding car value pair
+        if option.text == carInput:
+          print((option['value']))
       print("")
     else:
       print("{} not found!".format(carInput))
       print("")
     file1.close() #closing file
     continue
-  
+
 #figure out link 
 link = ("")
-chrome_loc = "C:/Program Files (x86)/Google/Chrome/Application/chrome.exe %s"
-
+chrome_loc = "C:/Program Files (x86)/Google/Chrome/Application/chrome.exe %s"    
+    
 for url in [link]:
   try:
     response = requests.get(url)
