@@ -12,7 +12,7 @@ car1 = ""
 while True:
   try:
     carInput = input("What car are you looking for?"
-                     "\nEnter 'q' to quit. ").lower()
+                     "\nEnter 'q' to quit. ")
   except ValueError:
     continue
   else:
