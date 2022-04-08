@@ -16,7 +16,7 @@ while True:
   except ValueError:
     continue
   else:
-    file1 = open("", "r") #opening file to locate car identifier number
+    file1 = open("carlist.txt", "r") #opening file to locate car identifier number
     readfile = file1.read() #reading file contents
     soup = BeautifulSoup(readfile, 'html.parser')
     
