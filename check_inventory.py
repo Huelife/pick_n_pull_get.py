@@ -16,7 +16,6 @@ while True:
   except ValueError:
     continue
   else:
-    print("")
     file1 = open("", "r") #opening file to locate car identifier number
     readfile = file1.read() #reading file contents
     soup = BeautifulSoup(readfile, 'html.parser')
@@ -29,10 +28,8 @@ while True:
         if option.text == carInput:
           car1 = (option['value'])
           print((option['value']))
-      print("")
     else:
       print("{} not found!".format(carInput))
-      print("")
     file1.close() #closing file
     continue
 
