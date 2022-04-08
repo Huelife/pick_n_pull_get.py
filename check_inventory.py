@@ -29,6 +29,7 @@ while True:
       print(carInput, " found!")
       for option in soup.find_all('option'):  #finding car value pair
         if option.text == carInput:
+          car1 = (option['value'])
           print((option['value']))
       print("")
     else:
@@ -38,8 +39,9 @@ while True:
     continue
 
 #figure out link 
-link = ("")
-chrome_loc = "C:/Program Files (x86)/Google/Chrome/Application/chrome.exe %s"    
+link = ("https://www.picknpull.com/check-inventory/vehicle-search?"
+        "make={}&model=&distance=25&zip=94578&year=".format(car1))
+chrome_loc = "C:/Program Files/Google/Chrome/Application/chrome.exe %s"    
     
 for url in [link]:
   try:
