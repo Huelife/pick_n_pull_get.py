@@ -28,10 +28,11 @@ while True:
         if option.text == carInput:
           car1 = (option['value'])
           print((option['value']))
+      break
     else:
       print("{} not found!".format(carInput))
+      continue
     file1.close() #closing file
-    continue
 
 #figure out link 
 link = ("https://www.picknpull.com/check-inventory/vehicle-search?"
